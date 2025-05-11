@@ -6,6 +6,21 @@ function badFunction() {
     if (a === b) {
         console.log("Equal");
     }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
     // Biến không dùng
     const unused = 123;
     // Hàm không trả về gì
