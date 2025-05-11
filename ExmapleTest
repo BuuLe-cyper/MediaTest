@@ -27,3 +27,17 @@ function badFunction() {
 }
 
 badFunction();
+
+// Security hotspot: Hardcoded password
+const password = "123456";
+
+// Measured code: Duplicate code
+function duplicateFunction() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+}
+
+duplicateFunction();
