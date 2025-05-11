@@ -1,0 +1,14 @@
+// File này cố tình viết code kém chất lượng để test SonarQube gate fail
+
+function badFunction() {
+    const a = 1;
+    const b = 2;
+    if (a == b) {
+        console.log("Equal");
+    }
+    // Biến không dùng
+    const unused = 123;
+    // Hàm không trả về gì
+}
+
+badFunction();
