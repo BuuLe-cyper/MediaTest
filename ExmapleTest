@@ -1,0 +1,129 @@
+// File này cố tình viết code kém chất lượng để test SonarQube gate fail
+
+function badFunction() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    if (a === b) {
+        console.log("Equal");
+    }
+    // Biến không dùng
+    const unused = 123;
+    // Hàm không trả về gì
+}
+
+badFunction();
+
+// Security hotspot: Hardcoded password
+const password = "123456";
+
+// Measured code: Duplicate code
+function duplicateFunction() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+}
+
+duplicateFunction();
+
+// Thêm code để tạo lỗi vượt qua các điều kiện của SonarQube
+// 1. Thêm bug mới
+function buggyFunction() {
+    const x: number = 10;
+    const y: number = 0;
+    const result = x / y; // Division by zero
+    console.log(result);
+}
+
+buggyFunction();
+
+// 2. Thêm vulnerability mới
+const apiKey = "sk_test_1234567890abcdefghijklmnopqrstuvwxyz";
+
+// 3. Thêm technical debt
+function complexFunction() {
+    let a = 1;
+    let b = 2;
+    let c = 3;
+    let d = 4;
+    let e = 5;
+    let f = 6;
+    let g = 7;
+    let h = 8;
+    let i = 9;
+    let j = 10;
+    let k = 11;
+    let l = 12;
+    let m = 13;
+    let n = 14;
+    let o = 15;
+    let p = 16;
+    let q = 17;
+    let r = 18;
+    let s = 19;
+    let t = 20;
+    let u = 21;
+    let v = 22;
+    let w = 23;
+    let x = 24;
+    let y = 25;
+    let z = 26;
+    console.log(a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z);
+}
+
+complexFunction();
+
+// 4. Thêm security hotspot chưa review
+const secretKey = "secret123";
+
+// 5. Thêm code không có test coverage
+function untestedFunction() {
+    console.log("This function is not tested");
+}
+
+untestedFunction();
+
+// 6. Thêm code trùng lặp
+function duplicateFunction1() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+}
+
+function duplicateFunction2() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+}
+
+function duplicateFunction3() {
+    const a: number = 1;
+    const b: number = 2;
+    if (a === b) {
+        console.log("Equal");
+    }
+}
+
+duplicateFunction1();
+duplicateFunction2();
+duplicateFunction3();
